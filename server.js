@@ -198,7 +198,7 @@ app.put('/api/nandos/users/:id', async (req, res) => {
 app.delete('/api/nandos/users/:id', async (req, res) => {
   try {
     const result = await NandosUser.deleteOne({ _id: req.params.id });
-    if (result.deletedCount === 0) return sendStatus(404);
+    if (result.deletedCount === 0) return res.sendStatus(404);
     res.sendStatus(204);
   } catch (err) {
     console.error(err);
