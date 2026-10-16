@@ -5,7 +5,7 @@
 console.log('I love backend');
 
 try {
-  const res = await fetch('http://localhost:4444/api/nandos/users');
+  const res = await fetch('https://app-server-production-a70b.up.railway.app/');
   console.log('res', res);
 
   if (!res.ok) {
